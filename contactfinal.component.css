@@ -1,0 +1,62 @@
+#searchedcontact{
+    position: relative;
+    left: 20px;
+    width: 400px;
+}
+#input1{
+    width: 400px;
+}
+::placeholder{
+    font-size: medium;
+}
+#maindiv1{
+    background-color: lightgray;
+    height: 600px;
+    width: 500px;
+    margin-left: 25%;
+    font-size: medium;
+}
+#innerdiv1{
+    position: relative;
+    left: 5px;
+}
+#innerdiv2{
+    background-color: white;
+    border: 1px soli white;
+    font-size: medium;
+    position: relative;
+    width: 300px;
+    left: 100px;
+}
+#innerdiv3{
+    background-color: white;
+    position: relative;
+    width: 400px;
+    left: 40px;
+}
+#innerdiv4{
+    position: relative;
+    left: 10px;   
+    width: 350px;
+}
+#span1{
+    position: relative;
+    text-align: center;
+}
+#button1{
+    position: relative;
+    left: 350px;
+    background-color: blue;   
+}
+#button2{
+    position: relative;
+    left: 200px;
+}
+#para1{
+    position: absolute;
+}
+#showsearch{
+    left: 20px;
+    background-color: white;
+    width: 450px;
+}

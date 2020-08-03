@@ -1,0 +1,38 @@
+<div id="maindiv1" >
+    <span id="span1"><h3><b><i class="fa fa-address-book"></i>Phone Book App</b></h3></span>
+   <div id="innerdiv1">
+       <p id="para1">
+           <b>Contacts</b>
+       </p>
+       <button id="button1" (click)="Add()">+Add Contact</button>
+       <input id="input1" [(ngModel)]="test"  class="form-control"   type="text" placeholder="Search for contact by last name" (input)="searching()" />
+      <br>
+      <div *ngIf="add" id="innerdiv2">
+          <p><b>NewContact</b></p>
+          <input type="text" [(ngModel)]="contact.firstname" placeholder="firstname" class="form-control" />
+          <input   type="text" [(ngModel)]="contact.lastname" placeholder="lastname" class="form-control" />
+          <input type="text" [(ngModel)]="contact.mob" placeholder="number" class="form-control" />
+          <button  class="btn btn-primary" (click)="save()" >Create</button>
+          <button class="btn btn-secondary" (click)="cancel()">Cancel</button>
+      </div>
+      <div  id="innerdiv3" *ngIf="!fun">
+       <div *ngFor="let c of contacts" id="innerdiv4" >
+          <p>
+           {{c.firstname+" "+c.lastname}} <br/>
+        
+           {{c.mob}}
+           <button id="button2" (click)="delete(c)"   class="alert alert-danger"><i class="glyphicon glyphicon-trash"></i></button>
+          </p>
+           <hr>
+        </div>
+      </div>
+      <section id="showsearch"  *ngIf="fun" >
+          <section *ngFor="let contact of contactsearch" id="searchedcontact">
+          {{contact.firstname + " "+contact.lastname}}<br>
+          {{contact.mob}}
+          <hr>
+        </section>
+      </section>
+     
+   </div>
+</div>
